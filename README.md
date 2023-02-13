@@ -9,13 +9,13 @@ Para que a integração possa efetivamente funcionar, existem alguns requisitos 
 
 1. Rotina de Autenticação: existem 3 tipos diferentes de OpenAPI por conta dos diferentes parâmetros comuns. O importante neste caso é a Shop API, que apresenta os seguintes parâmetros:
     
-    Shop API: **partner_id, api path, timestamp, access_token, shop_id**
+    Shop API: **partner_id, api_path, timestamp, access_token, shop_id**
     
     Exemplo：
     
     partner_id: `2001887`
     
-    API path: `/api/v2/shop/get_shop_info`
+    api_path: `/api/v2/shop/get_shop_info`
     
     timestamp: `1655714431`
     
@@ -24,7 +24,7 @@ Para que a integração possa efetivamente funcionar, existem alguns requisitos 
     shop id: `14701711`
     
 
-Seguindo, é necessário criar um ****Cálculo de Assinatura**** em que precisamos concatatenar o API path com os parâmetro apresentados para gerar uma Basestring. Exemplo：
+Seguindo, é necessário criar um ****Cálculo de Assinatura**** em que precisamos concatatenar o API path com os parâmetros apresentados para gerar uma Basestring. Exemplo：
 
 Basestring = `2001887/api/v2/shop/get_shop_info165571443159777174636562737266615546704c6d14701711`
 

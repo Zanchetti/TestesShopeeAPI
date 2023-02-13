@@ -9,7 +9,7 @@ $partner_key = "57615053704d6470644f554a78656d50484143644964436a5568777544524579
 $code = "494d7a4a4f5a66524556776f66425453";
 $host = "https://partner.shopeemobile.com";
 
-//Existem 4 passos para a concluir sua autorização: Gerar o link de autorização, adquirir autorização da loja, usar o código de autorização, e obter e atualizar o token de acesso
+//Existem 4 passos para a concluir sua autorização: Gerar o link de autorização, adquirir autorização da loja, usar o código de autorização, e obter e atualizar o token de acesso. Ai então podemos assinar nossas requisições para a API.
 
 //Método que gera a url de acesso para o dono da loja dar a autorização
 function authShop($partner_id, $partner_key)

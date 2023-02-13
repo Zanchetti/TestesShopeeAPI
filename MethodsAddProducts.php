@@ -13,6 +13,7 @@ function signature($partner_id, $path_api, $access_token, $shop_id, $partner_key
     $sign = hash_hmac('sha256', $base_string, $partner_key);
     return $sign;
 }
+
 function uploadImage($partner_id, $access_token, $shop_id, $partner_key)
 {
     $curl = curl_init();

@@ -13,22 +13,22 @@ Para que a integração possa efetivamente funcionar, existem alguns requisitos 
     
     Exemplo：
     
-    partner_id: 2001887
+    partner_id: `2001887`
     
-    API path: /api/v2/shop/get_shop_info
+    API path: `/api/v2/shop/get_shop_info`
     
-    timestamp: 1655714431
+    timestamp: `1655714431`
     
-    access_token: 59777174636562737266615546704c6d
+    access_token: `59777174636562737266615546704c6d`
     
-    shop id: 14701711
+    shop id: `14701711`
     
 
-Seguindo, é necessário criar um ****Cálculo de Assinatura**** em que precisamos concatatenar o API path com os parâmetro apresentados para gerar uma Basestring****.**** Exemplo：
+Seguindo, é necessário criar um ****Cálculo de Assinatura**** em que precisamos concatatenar o API path com os parâmetro apresentados para gerar uma Basestring. Exemplo：
 
-Basestring = 2001887/api/v2/shop/get_shop_info165571443159777174636562737266615546704c6d14701711
+Basestring = `2001887/api/v2/shop/get_shop_info165571443159777174636562737266615546704c6d14701711`
 
-O próximo passo é c**alcular a assinatura usando o algoritmo HMAC-SHA256** na base string e na partner key, o resultado do cálculo é uma string codificada em hexadecimal. Exemplo：
+O próximo passo é **calcular a assinatura usando o algoritmo HMAC-SHA256** na base string e na partner key, o resultado do cálculo é uma string codificada em hexadecimal. Exemplo：
 
 sign=`56f31d01aeda9d08bf456b37f6f6640ef8614b4d6ad49baafe30b39a061f0e26`
 

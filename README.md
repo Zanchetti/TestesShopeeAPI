@@ -34,7 +34,9 @@ sign=`56f31d01aeda9d08bf456b37f6f6640ef8614b4d6ad49baafe30b39a061f0e26`
 
 Agora toda vez que for necessário fazer uma requisição usaremos um método que gera esta assinatura para efetivamente nos autenticarmos na API. 
 
-1. Criação do Produto: para a criação de um produto é necessário a utilização de diversos métodos antes de efetivamente cadastrar um produto, e são eles: 
+
+
+1. Criação do Produto: Para a criação de um produto é necessário a utilização de diversos métodos antes de efetivamente cadastrar um produto, e são eles: 
     1. **v2.media_space.upload_image -** Fazemos o upload da imagem do produto para o servidor da shopee
     2. **v2.product.category_recommend -** Fornecemos o nome do produto e a imagem para que a API forneça a recomendação de uma categoria para  seu produto.
     3. **v2.product.get_attributes -** Retorna a lista de atributos que uma certa categoria de produto deve ter

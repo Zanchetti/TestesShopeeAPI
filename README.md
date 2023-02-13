@@ -7,7 +7,7 @@ Para que a integração possa efetivamente funcionar, existem alguns requisitos 
     1. Os dois processos acima necessitam da revisão e aprovação da shopee.
     2. É recomendado que seja usado um IP estático.
 
-1. Rotina de Autenticação: existem 3 tipos diferentes de OpenAPI por conta dos diferentes parâmetros comuns. O importante neste caso é a Shop API, que apresenta os seguintes parâmetros:
+**3. Rotina de Autenticação:** existem 3 tipos diferentes de OpenAPI por conta dos diferentes parâmetros comuns. O importante neste caso é a Shop API, que apresenta os seguintes parâmetros:
     
     Shop API: **partner_id, api_path, timestamp, access_token, shop_id**
     
@@ -36,7 +36,7 @@ Agora toda vez que for necessário fazer uma requisição usaremos um método qu
 
 
 
-1. Criação do Produto: Para a criação de um produto é necessário a utilização de diversos métodos antes de efetivamente cadastrar um produto, e são eles: 
+**Criação do Produto:** Para a criação de um produto é necessário a utilização de diversos métodos antes de efetivamente cadastrar um produto, e são eles: 
     1. **v2.media_space.upload_image -** Fazemos o upload da imagem do produto para o servidor da shopee
     2. **v2.product.category_recommend -** Fornecemos o nome do produto e a imagem para que a API forneça a recomendação de uma categoria para  seu produto.
     3. **v2.product.get_attributes -** Retorna a lista de atributos que uma certa categoria de produto deve ter

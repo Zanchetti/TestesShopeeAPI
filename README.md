@@ -48,12 +48,12 @@ Agora toda vez que for necessário fazer uma requisição usaremos um método qu
     
     ```php
     {
-        "description":"fewajidfosa jioajfiodsa fewajfioewa jicoxjsi fjdiao fjeiwao fdsjiao fejwiao jfdsioafjeiowa jfidsax",
-        "item_name":"Hello WXwhGUCI574UsyBHu5J2indlBT6s08av",
+        "description":"Sensor de Nível Pá Rotativa",
+        "item_name":"Sensor de Nível Pá Rotativa",
         "category_id":14695,
         "brand":{
             "brand_id":123,
-            "original_brand_name":"nike"
+            "original_brand_name":"Brasiltec"
         },
         "logistic_info":[
             {

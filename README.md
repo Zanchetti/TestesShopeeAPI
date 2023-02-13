@@ -7,7 +7,7 @@ Para que a integração possa efetivamente funcionar, existem alguns requisitos 
     1. Os dois processos acima necessitam da revisão e aprovação da shopee.
     2. É recomendado que seja usado um IP estático.
 
-**3. Rotina de Autenticação:** existem 3 tipos diferentes de OpenAPI por conta dos diferentes parâmetros comuns. O importante neste caso é a Shop API, que apresenta os seguintes parâmetros:
+1. Rotina de Autenticação: existem 3 tipos diferentes de OpenAPI por conta dos diferentes parâmetros comuns. O importante neste caso é a Shop API, que apresenta os seguintes parâmetros:
     
     Shop API: **partner_id, api_path, timestamp, access_token, shop_id**
     

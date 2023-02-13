@@ -2,8 +2,12 @@
 Para que a integração possa efetivamente funcionar, existem alguns requisitos que devem ser cumpridos:
 1. Cadastro de uma conta de desenvolvedor, podendo ser de 3 tipos diferentes:  Vendedor CPF; Vendedor CNPJ ou Third-party Partner Platform;
 2. A criaçao de um app na Open Platform da Shopee que neste exemplo seria um Product Management, que é um tipo de app usado para gerir processos relacionados a produtos.
-    1. Os dois processos acima necessitam da revisão e aprovação da shopee.
+3. Conseguir a autorização da loja, e isso envolve 4 principais operações: Gerar o link de autorização, adquirir autorização da loja, usar o código de autorização, e obter e atualizar o token de acesso
+    1. Os dois primeiro processos acima necessitam da revisão e aprovação da shopee.
     2. É recomendado que seja usado um IP estático.
+
+Agora que já cumprimos os principais requisitos podemos começar efetivamente a trabalhar na rotina de autenticação.
+
 1. Rotina de Autenticação: existem 3 tipos diferentes de OpenAPI por conta dos diferentes parâmetros comuns. O importante neste caso é a Shop API, que apresenta os seguintes parâmetros:
     
     Shop API: **partner_id, api_path, timestamp, access_token, shop_id**
@@ -22,9 +26,12 @@ Para que a integração possa efetivamente funcionar, existem alguns requisitos 
     
 Seguindo, é necessário criar um ****Cálculo de Assinatura**** em que precisamos concatatenar o API path com os parâmetros apresentados para gerar uma Basestring. Exemplo：
 Basestring = `2001887/api/v2/shop/get_shop_info165571443159777174636562737266615546704c6d14701711`
+
 O próximo passo é **calcular a assinatura usando o algoritmo HMAC-SHA256** na base string e na partner key, o resultado do cálculo é uma string codificada em hexadecimal. Exemplo：
 sign=`56f31d01aeda9d08bf456b37f6f6640ef8614b4d6ad49baafe30b39a061f0e26`
+
 Agora toda vez que for necessário fazer uma requisição usaremos um método que gera esta assinatura para efetivamente nos autenticarmos na API. 
+
 1. Criação do Produto: Para a criação de um produto é necessário a utilização de diversos métodos antes de efetivamente cadastrar um produto, e são eles: 
     1. **v2.media_space.upload_image -** Fazemos o upload da imagem do produto para o servidor da shopee
     2. **v2.product.category_recommend -** Fornecemos o nome do produto e a imagem para que a API forneça a recomendação de uma categoria para  seu produto.
